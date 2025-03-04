@@ -1,36 +1,50 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Churras do Jhon</title>
+    <title>Chatbot Suporte</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="chat-container">
-        <div class="chat-box" id="chat-box">
-            <div class="message received">Olá! Como vai?</div>
-            <div class="message sent">Oi! Estou bem, e você?</div>
+        <div class="chat-header">
+            <img src="/assets/chef-icon.png" alt="Chatbot">
+            <div class="header-text">
+                <h2>Churrasquinho do Jhon</h2>
+                <p>Suporte Técnico</p>
+            </div>
         </div>
-        <div class="input-box">
-            <input type="text" id="message-input" placeholder="Digite uma mensagem...">
-            <button onclick="sendMessage()">Enviar</button>
+
+        <div class="chat-box">
+            <div class="message bot">
+                <img src="/assets/chef-icon.png" alt="Bot">
+                <p>Olá, cliente<br>Como posso ajudar?</p>
+            </div>
+            <div class="message user">
+                <p>Olá, quero alterar meu endereço de entrega</p>
+            </div>
+            <div class="message bot">
+                <img src="/assets/chef-icon.png" alt="Bot">
+                <p>Tudo bem. Vamos alterar seu endereço. Por favor, informe seu e-mail.</p>
+            </div>
+            <div class="message user">
+                <p>Cliente@cest.edu.br</p>
+            </div>
         </div>
-    </div>
-    <script>
-        function sendMessage() {
-            const input = document.getElementById("message-input");
-            const message = input.value.trim();
-            if (message !== "") {
-                const chatBox = document.getElementById("chat-box");
-                const newMessage = document.createElement("div");
-                newMessage.classList.add("message", "sent");
-                newMessage.textContent = message;
-                chatBox.appendChild(newMessage);
-                input.value = "";
-                chatBox.scrollTop = chatBox.scrollHeight;
-            }
-        }
-    </script>
+
+        <div class="chat-footer">
+            <input type="text" placeholder="Digite sua mensagem...">
+            <button><i class="fas fa-paper-plane"></i></button>
+        </div>
+
+        <div class="bottom-nav">
+            <i class="fas fa-home"></i>
+            <i class="fas fa-shopping-cart"></i>
+            <i class="fas fa-headset"></i>
+            <i class="fas fa-user"></i>
+        </div>
+    </div> <!-- Fechamento correto da div -->
 </body>
 </html>

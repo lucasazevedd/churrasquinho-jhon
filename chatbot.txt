@@ -1,0 +1,82 @@
+Link do fluxograma:
+
+https://miro.com/welcomeonboard/QjJTaERWOHFoUnI0QW9NanpLUGh6VXJqNVpXdEVySmp2TDBpM0ZxZm9LOW9EOXVYREsxc01Gdm5nazZyTjFMMURBSHZob1VOZGlHZndOSDdoQnJaRjlVT1JFVE9tZUsrM0U2THNWemo0S0RRcDVpVFBmaStMS3lxeFRYOXpBc25zVXVvMm53MW9OWFg5bkJoVXZxdFhRPT0hdjE=?share_link_id=153357817919
+
+
+Início do Chatbot
+🤖: Olá! Bem-vindo ao ChurrasBot! 🌭🔥 Queremos saber sua opinião sobre nossa comida e atendimento. Vamos começar?
+Opções:
+✅ Sim
+❌ Não
+
+Se escolher "Não"
+🤖: Sem problemas! Se quiser avaliar depois, ficaremos por aqui. Bom apetite! 🍽️
+
+Se escolher "Sim"
+🤖: Ótimo! Primeira pergunta:
+
+1️⃣ Como você está avaliando a carne? (1 a 5)
+🤖: De 1 a 5, qual nota você dá para a carne? 🥩
+Opções:
+⭐ 1
+⭐ 2
+⭐ 3
+⭐ 4
+⭐ 5
+
+🔹Se responder 1, 2 ou 3:
+🤖: Sentimos muito que a carne não tenha te agradado! 😔 O que podemos melhorar?
+📝 (Usuário pode digitar um feedback)
+🤖: Agradecemos seu comentário e vamos trabalhar nisso!
+
+🔹Se responder 4 ou 5:
+🤖: Que bom que gostou da carne! Ficamos felizes em saber disso! 😊
+
+2️⃣ Como você avalia os acompanhamentos?
+🤖: E os acompanhamentos? Como estavam? 🍚🥗
+Opções:
+✅ Bom
+➖ Médio
+❌ Ruim
+
+🔹Se escolher "Bom"
+🤖: Maravilha! Que bom que gostei! 😃
+
+🔹Se escolher "Médio"
+🤖: Vamos melhorar ainda mais para você gostar da próxima vez! 💪
+
+🔹Se escolher "Ruim"
+🤖: Sentimos muito! O que podemos melhorar nos acompanhamentos?
+📝 (Usuário pode digitar um feedback)
+🤖: Obrigado pelo seu comentário! Vamos revisar isso!
+
+3️⃣ Como foi nosso atendimento?
+🤖: Nossa equipe te atendeu bem? 😊👨‍🍳
+Opções:
+✅ Sim
+❌ Não
+
+🔹Se escolher "Sim"
+🤖: Que ótimo! Nosso time agradece seu elogio! 🥰
+
+🔹Se escolher "Não"
+🤖: Poxa, sentimos muito! Queremos melhorar. O que aconteceu?
+📝 (O usuário pode digitar um feedback)
+🤖: Obrigado pelo feedback! Vamos trabalhar para melhorar nosso atendimento.
+
+4️⃣ Você voltaria a comprar conosco?
+🤖: Você voltaria a comprar nosso churrasquinho no futuro? 🔥🍢
+Opções:
+✅ Sim
+❌ Não
+
+🔹 Se escolher "Sim"
+🤖: Isso nos deixa muito felizes! 😃 Esperamos te ver de novo em breve!
+
+🔹 Se escolher "Não"
+🤖: Sentimos muito em saber disso! Podemos fazer algo para melhorar?
+📝 (Usuário pode digitar um feedback)
+🤖: Agradecemos seu comentário e vamos trabalhar para melhorar sua experiência!
+
+Encerramento
+🤖: Muito obrigado por sua avaliação! Seu feedback é muito importante para nós. Esperamos te ver em breve para um churrasquinho ainda melhor! 🔥🍢😃 (faça um fluxograma desse chatbot de avaliação de churrasquinho)
