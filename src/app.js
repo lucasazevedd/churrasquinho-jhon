@@ -88,24 +88,36 @@ document.addEventListener("DOMContentLoaded", () => {
             displayBotMessage(
               "Sentimos muito que a carne não tenha te agradado! 😔 O que podemos melhorar?"
             );
+            currentStep = 3; // Solicita comentário sobre a carne
           } else {
             displayBotMessage(
               "Que bom que gostou da carne! Ficamos felizes em saber disso! 😊"
             );
+            setTimeout(() => {
+              displayBotMessage(
+                "Agradecemos seu comentário e vamos trabalhar nisso!"
+              );
+              displayBotMessage("E os acompanhamentos? Como estavam? 🍚🥗");
+              displayBotMessage("Opções:\n✅ Bom\n➖ Médio\n❌ Ruim");
+              currentStep = 4;
+            }, 1500);
           }
-          setTimeout(() => {
-            displayBotMessage(
-              "Agradecemos seu comentário e vamos trabalhar nisso!"
-            );
-            displayBotMessage("E os acompanhamentos? Como estavam? 🍚🥗");
-            displayBotMessage("Opções:\n✅ Bom\n➖ Médio\n❌ Ruim");
-            currentStep = 4;
-          }, 1500);
         } else {
           displayBotMessage(
             "Por favor, escolha uma nota entre 1 e 5 para a carne."
           );
         }
+        break;
+
+      case 3: // Resposta sobre o que melhorar na carne
+        displayBotMessage(
+          "Obrigado pelo seu comentário! Vamos trabalhar para melhorar. 😊"
+        );
+        setTimeout(() => {
+          displayBotMessage("E os acompanhamentos? Como estavam? 🍚🥗");
+          displayBotMessage("Opções:\n✅ Bom\n➖ Médio\n❌ Ruim");
+          currentStep = 4;
+        }, 1500);
         break;
 
       case 4:
@@ -119,12 +131,19 @@ document.addEventListener("DOMContentLoaded", () => {
           displayBotMessage(
             "Sentimos muito! O que podemos melhorar nos acompanhamentos?"
           );
+          currentStep = 5; // Solicita comentário sobre os acompanhamentos
         } else {
           displayBotMessage(
             "Opção inválida. Por favor, escolha entre 'Bom', 'Médio' ou 'Ruim'."
           );
           return;
         }
+        break;
+
+      case 5: // Resposta sobre o que melhorar nos acompanhamentos
+        displayBotMessage(
+          "Obrigado pelo seu comentário! Vamos melhorar para você. 😊"
+        );
         setTimeout(() => {
           displayBotMessage("Nossa equipe te atendeu bem? 😊👨‍🍳");
           displayBotMessage("Opções:\n✅ Sim\n❌ Não");
