@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
           );
           displayBotMessage("Opções:\n⭐ 1\n⭐ 2\n⭐ 3\n⭐ 4\n⭐ 5");
           currentStep = 2;
-        } else if (choice === "não" || choice === "não quero") {
+        } else if (choice === "não") {
           displayBotMessage(
             "Sem problemas! Se quiser avaliar depois, ficaremos por aqui. Bom apetite! 🍽️"
           );
@@ -94,9 +94,12 @@ document.addEventListener("DOMContentLoaded", () => {
               "Que bom que gostou da carne! Ficamos felizes em saber disso! 😊"
             );
             setTimeout(() => {
+<<<<<<< Updated upstream
               displayBotMessage(
                 "Agradecemos seu comentário e vamos trabalhar nisso!"
               );
+=======
+>>>>>>> Stashed changes
               displayBotMessage("E os acompanhamentos? Como estavam? 🍚🥗");
               displayBotMessage("Opções:\n✅ Bom\n➖ Médio\n❌ Ruim");
               currentStep = 4;
@@ -121,12 +124,14 @@ document.addEventListener("DOMContentLoaded", () => {
         break;
 
       case 4:
-        if (choice === "bom") {
-          displayBotMessage("Maravilha! Que bom que gostou! 😃");
-        } else if (choice === "médio") {
-          displayBotMessage(
-            "Vamos melhorar ainda mais para você gostar da próxima vez! 💪"
-          );
+        if (choice === "bom" || choice === "médio") {
+          // Segue o fluxo para o próximo passo mesmo quando a avaliação for boa ou média
+          displayBotMessage("Que bom que gostou dos acompanhamentos! 😃");
+          setTimeout(() => {
+            displayBotMessage("Nossa equipe te atendeu bem? 😊👨‍🍳");
+            displayBotMessage("Opções:\n✅ Sim\n❌ Não");
+            currentStep = 6;
+          }, 1500);
         } else if (choice === "ruim") {
           displayBotMessage(
             "Sentimos muito! O que podemos melhorar nos acompanhamentos?"
@@ -140,7 +145,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         break;
 
+<<<<<<< Updated upstream
       case 5: // Resposta sobre o que melhorar nos acompanhamentos
+=======
+      case 5:
+        // Aqui o usuário dá um comentário sobre o que melhorar nos acompanhamentos
+>>>>>>> Stashed changes
         displayBotMessage(
           "Obrigado pelo seu comentário! Vamos melhorar para você. 😊"
         );
@@ -154,18 +164,25 @@ document.addEventListener("DOMContentLoaded", () => {
       case 6:
         if (choice === "sim") {
           displayBotMessage("Que ótimo! Nosso time agradece seu elogio! 🥰");
+          setTimeout(() => {
+            displayBotMessage("Você voltaria a comprar nosso churrasquinho no futuro? 🔥🍢");
+            displayBotMessage("Opções:\n✅ Sim\n❌ Não");
+            currentStep = 8;
+          }, 1500);
         } else if (choice === "não") {
-          displayBotMessage(
-            "Poxa, sentimos muito! Queremos melhorar. O que aconteceu?"
-          );
+          displayBotMessage("Sentimos muito em saber disso! Podemos fazer algo para melhorar?");
+          currentStep = 7; // Agora pede o comentário sobre o atendimento
         } else {
           displayBotMessage("Opção inválida! Responda com 'Sim' ou 'Não'.");
           return;
         }
+        break;
+
+      case 7:
+        // Aqui o usuário dá um comentário sobre o que melhorar no atendimento
+        displayBotMessage("Obrigado pelo seu feedback! Vamos trabalhar para melhorar nosso atendimento. 😊");
         setTimeout(() => {
-          displayBotMessage(
-            "Você voltaria a comprar nosso churrasquinho no futuro? 🔥🍢"
-          );
+          displayBotMessage("Você voltaria a comprar nosso churrasquinho no futuro? 🔥🍢");
           displayBotMessage("Opções:\n✅ Sim\n❌ Não");
           currentStep = 8;
         }, 1500);
@@ -173,21 +190,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
       case 8:
         if (choice === "sim") {
-          displayBotMessage(
-            "Isso nos deixa muito felizes! 😃 Esperamos te ver de novo em breve!"
-          );
+          displayBotMessage("Isso nos deixa muito felizes! 😃 Esperamos te ver de novo em breve!");
         } else if (choice === "não") {
-          displayBotMessage(
-            "Sentimos muito em saber disso! Podemos fazer algo para melhorar?"
-          );
+          displayBotMessage("Sentimos muito em saber disso! Desejamos a sua felicidade");
         } else {
           displayBotMessage("Opção inválida! Responda com 'Sim' ou 'Não'.");
           return;
         }
         setTimeout(() => {
-          displayBotMessage(
-            "Muito obrigado por sua avaliação! Seu feedback é muito importante para nós. Esperamos te ver em breve para um churrasquinho ainda melhor! 🔥🍢😃"
-          );
+          displayBotMessage("Muito obrigado por sua avaliação! Seu feedback é muito importante para nós. Esperamos te ver em breve para um churrasquinho ainda melhor! 🔥🍢😃");
           currentStep = 0;
         }, 1500);
         break;
@@ -197,7 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  //Execução da Função do chatbot
+  // Execução da Função do chatbot
   startChat();
 
   // Aceita respostas enviadas com o Enter
