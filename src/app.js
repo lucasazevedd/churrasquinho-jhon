@@ -94,12 +94,6 @@ document.addEventListener("DOMContentLoaded", () => {
               "Que bom que gostou da carne! Ficamos felizes em saber disso! 😊"
             );
             setTimeout(() => {
-<<<<<<< Updated upstream
-              displayBotMessage(
-                "Agradecemos seu comentário e vamos trabalhar nisso!"
-              );
-=======
->>>>>>> Stashed changes
               displayBotMessage("E os acompanhamentos? Como estavam? 🍚🥗");
               displayBotMessage("Opções:\n✅ Bom\n➖ Médio\n❌ Ruim");
               currentStep = 4;
@@ -145,12 +139,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         break;
 
-<<<<<<< Updated upstream
-      case 5: // Resposta sobre o que melhorar nos acompanhamentos
-=======
       case 5:
         // Aqui o usuário dá um comentário sobre o que melhorar nos acompanhamentos
->>>>>>> Stashed changes
         displayBotMessage(
           "Obrigado pelo seu comentário! Vamos melhorar para você. 😊"
         );
